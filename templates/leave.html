@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>請假申請</title>
+    </head>
+    <body>
+        <h1>請假申請</h1>
+        <div>{{ name }}您好</div>
+        <form action="/sucess" method="post" enctype="multipart/form-data">
+            <label for="dateOfLeave">請假日期</label>
+            <input type="date" id="dateOfLeave" name="dateOfLeave" required>
+            <br>
+            <label for="typeOfLeave">假別</label>
+            <select id="typeOfLeave" name="typeOfLeave" required>
+                <option value="事假">事假</option>
+                <option value="病假">病假</option>
+                <option value="喪假">喪假</option>
+            </select>
+            <br>
+            <label for="proof">證明</label>
+            <input type="file" id="proof" name="proof">
+            <br>
+            <button type="submit">提交申請</button>
+        </form>
+    </body>
+</html>
