@@ -22,6 +22,13 @@
             <label for="proof">證明</label>
             <input type="file" id="proof" name="proof">
             <br>
+            <label for="agent">代理人</label>
+            <select id="agent" name="agent" required>
+                {% for employee in employees %}
+                    <option value="{{employee}}">{{employee}}</option>
+                {% endfor %}
+            </select>
+            <br>
             <button type="submit">提交申請</button>
         </form>
     </body>

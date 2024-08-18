@@ -16,9 +16,10 @@ def setUpSQL():
         name TEXT NOT NULL,
         date TEXT NOT NULL,
         type TEXT NOT NULL,
-        proof BLOB
+        proof BLOB,
+        agent TEXT NOT NULL,
+        verify INTEGER NOT NULL
     )
     ''')
-    cursor.execute("INSERT INTO employees (name,idNumber,department) VALUES (?,?,?)",("YC","O123","dev"))
     connection.commit()
     connection.close()

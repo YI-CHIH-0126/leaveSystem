@@ -4,3 +4,5 @@ __pycache__/
 *.db
 *db-journal
 config.py
+test.py
+*.DS_store
